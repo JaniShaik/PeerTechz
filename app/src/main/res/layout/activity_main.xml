@@ -1,18 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".activity.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                android:background="#4D5194"
+                android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/img3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/imageView"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp_loadFullNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="0sp" />
+
+                    <View
+                        android:id="@+id/viewline1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/ccp_loadFullNumber"
+                        android:layout_alignBottom="@+id/name_ET"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/view_line" />
+
+                    <EditText
+                        android:id="@+id/name_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:background="@android:color/transparent"
+                        android:maxLength="10"
+                        android:gravity="start"
+                        android:hint="Enter Your Mobile Number"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignBottom="@+id/name_ET"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginRight="20sp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/view_line" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/user"
+                android:layout_margin="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/copyright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom|center_horizontal"
+                    android:letterSpacing="0.1"
+                    android:text="We will send you a One time SMS message"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/copyright"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/carrier"
+                    android:letterSpacing="0.1"
+                    android:text="Carrier rates may apply"
+                    android:textAllCaps="false"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="12sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/carrier"
+                    android:id="@+id/arrowicon_ll"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0sp"
+                        android:background="@drawable/roundcircle"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:shadowRadius="1.5">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/arrowicon"
+                            android:drawableLeft="@drawable/arrowicon"
+                            android:gravity="center"
+                            android:textColor="@color/grey"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checklayout"
+                    android:gravity="center"
+                    android:layout_below="@+id/arrowicon_ll"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/checkBox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/checkBox"
+                        android:background="@android:color/transparent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0sp"
+                        android:layout_marginLeft="5sp"
+                        android:text="Don't have an account?"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.1"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/signuptxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/checkBox"
+                        android:background="@android:color/transparent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="0sp"
+                        android:layout_marginLeft="5sp"
+                        android:text="Signup"
+                        android:letterSpacing="0.1"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:textColor="@color/violet"/>
+
+                </LinearLayout>
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/arrowbtn"
+                    android:layout_below="@+id/carrier"
+                    android:gravity="center">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="0sp"
+                                android:src="@drawable/arrowyellow"/>
+                </LinearLayout>-->
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

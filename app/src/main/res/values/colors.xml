@@ -3,4 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="view_line">#d6d1cd</color>
+    <color name="white">#FFF</color>
+    <color name="line">#9E9EA0</color>
+    <color name="grey">#959496</color>
+    <color name="darkgrey">#737274</color>
+    <color name="black">#000</color>
+    <color name="violetlight">#80E5DBF7</color>
+    <color name="violet">#461E8D</color>
+    <color name="blue">#4A5FD5</color>
+    <color name="lightwhite">#EAE7EB</color>
 </resources>

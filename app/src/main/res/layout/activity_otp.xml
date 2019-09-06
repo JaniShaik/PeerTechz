@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:windowSoftInputMode="stateVisible"
+    android:focusableInTouchMode="true"
+    tools:context=".OTPActivity"
+    android:background="#4D5194">
+    <LinearLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/leftbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="normal"
+            app:srcCompat="@drawable/left_peach"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+            android:layout_margin="30sp">
+
+
+            <TextView
+                android:id="@+id/verification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:letterSpacing="0.1"
+                android:text="Verification Code"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtVerification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/verification"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:letterSpacing="0.1"
+                android:text="Please type the verification code sent"
+                android:textColor="@color/violetlight"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/txtVerificationss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtVerification"
+                android:layout_marginTop="0dp"
+                android:textAlignment="center"
+                android:letterSpacing="0.1"
+                android:layout_centerHorizontal="true"
+                android:text="to +9100161630"
+                android:textColor="@color/violetlight"
+                android:textSize="15sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/txtVerificationss"
+                android:gravity="center">
+            <com.alimuzaffar.lib.pin.PinEntryEditText
+                android:id="@+id/txt_pin_entry"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:background="@null"
+                android:padding="0sp"
+                android:cursorVisible="true"
+                android:digits="1234567890"
+                android:layout_marginRight="40sp"
+                android:layout_marginLeft="40sp"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLength="4"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txtVerificationss"
+                android:textIsSelectable="false"
+                android:textSize="24dp"
+                app:pinAnimationType="fromBottom"
+                app:pinBackgroundDrawable="@drawable/bg_pin_round"
+                app:pinBackgroundIsSquare="true"
+                app:pinCharacterSpacing="15dp"
+                app:pinTextBottomPadding="10dp"
+                tools:ignore="SpUsage">
+                <requestFocus />
+            </com.alimuzaffar.lib.pin.PinEntryEditText>
+
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/carrier"
+            android:id="@+id/otparrowicon_ll"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0sp"
+                android:background="@drawable/roundcircle"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:shadowRadius="1.5">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/arrowicon"
+                    android:drawableLeft="@drawable/arrowicon"
+                    android:gravity="center"
+                    android:textColor="@color/grey"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

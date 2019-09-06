@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PeerTechz</string>
+
+<string-array name="category">
+    <item>Select</item>
+    <item>Doctor</item>
+    <item>Engineer</item>
+    <item>Phd</item>
+    <item>Scientist</item>
+
+</string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+<string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
